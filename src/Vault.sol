@@ -124,7 +124,7 @@ contract Vault is ReentrancyGuard, Pausable, Ownable {
     ASSET = asset_;
     s_name = name_;
     s_symbol = symbol_;
-    DECIMALS = IERC20Metadata(address(asset_)).decimals();
+    DECIMALS = 18; // Standardize to 18 decimals for shares
     s_maxTotalAssets = type(uint256).max;
     }
     /////////////////////////////////////////// 
